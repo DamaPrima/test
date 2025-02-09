@@ -1,0 +1,436 @@
+$bc_color: #FFFCF9;
+$blue_color: #1C2844;
+$orange_color: #FF824D;
+
+// Typography
+$font-family_I: "Inter", serif;
+$font-family_R: "Russo One", serif;
+$font-size-large: 64px;
+$font-size-medium: 48px;
+$font-size-regular: 1.23vw;
+$font-size-sem: 1.667vw;
+$font-weight: 500;
+
+html {
+  font-size: 24px;
+}
+
+.text-regular {
+  font-family: $font-family_I;
+  font-size: clamp(16px, 2vw, 24px);
+
+
+}
+
+.text-sem {
+  font-family: $font-family_I;
+  font-size: clamp(24px, 2vw, 32px);
+  height: calc(clamp(24px, 2vw, 32px) * 1.5);
+  margin: 0;
+}
+
+.text-large {
+  font-family: $font-family_I;
+  font-size: clamp(36px, 4vw, 64px);
+}
+
+hr {
+  margin: 0 8.333vw;
+  border: none;
+  border-bottom: $orange_color solid 2px;
+
+}
+
+header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8.333vw;
+
+
+
+  .logo {
+    display: flex;
+
+    .icon {
+      width: clamp(50px, 5vw, 102px);
+    }
+
+    .logo-text {
+      color: $orange_color;
+      font-family: $font-family_R;
+      font-weight: 400;
+      font-size: $font-size-regular;
+      display: flex;
+      align-items: end;
+      margin: -6px 10px;
+
+    }
+
+
+
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+
+
+    a {
+
+      display: flex;
+      padding-left: 30px;
+      align-items: center;
+
+
+
+      img {
+        padding-right: 5px;
+        width: clamp(50px, 5vw, 102px);
+        height: clamp(50px, 5vw, 102px);
+        // width: 5%;
+      }
+    }
+  }
+
+  .dropdown {
+    display: block;
+
+    summary {
+      display: none;
+    }
+  }
+}
+
+body {
+  background-color: $bc_color;
+
+  // .promo {
+  //   display: flex;
+  //   font-size: 60px;
+  //   font-weight: bold;
+  //   margin: 160px 160px;
+  //   justify-content: space-between;
+  //   align-items: center;
+
+  //   .video {
+  //     margin: 40px 0;
+
+
+  //   }
+  // }
+
+  //работает не трогать!
+  // .advantages {
+  //   display: flex;
+  //   margin: 8.333vw;
+  //   background-color: #1C2844;
+  //   border-radius: 25px;
+  //   height: 18.75vw;
+  //   padding: 0;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  //   align-content: center;
+  //   align-items: baseline;
+  //   // max-width: 200px;
+  //   // min-width: 100px;
+
+  //   > :nth-of-type(3) {
+  //     position: relative;
+  //     z-index: 2;
+  //     height: 23.438vw  ;
+  //     width: 100%;
+  //     margin: 0;
+  //     padding: 0 20px;
+  //     background-color: $orange_color;
+  //     display: flex;
+  //     // flex-direction: column;
+  //     justify-content: center;
+  //     border-radius: 25px;
+  //     // color: black;
+  //   }
+
+  //   .advantages-content {
+  //     width: calc(100%/5);
+  //     gap: 10px;
+  //     // height: 260px;
+  //     // height: 100%;
+  //     margin: 2.083vw 1.563vw;
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
+  //     text-align: center;
+  //     color: #FFFCF9;
+
+
+  //   }
+
+  //   img {
+  //     width: clamp(35px, 4vw,75px);
+  //     height: clamp(35px, 4vw,75px);
+  //   }
+  // }
+
+
+  .about_us {
+    margin: 220px 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+
+    .about_us-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $blue_color;
+      border-radius: 25px;
+      // padding: 40px;
+      width: 100%;
+      height: 830px;
+
+
+      .about_us-image-container {
+        display: flex;
+        flex-direction: column;
+
+        .image {
+          width: 415px;
+          height: 415px;
+          background-color: unset;
+        }
+      }
+
+
+      .second {
+        width: 700px;
+        height: 980px;
+        display: flex;
+        flex-direction: column;
+       
+        .second-text{
+          background-color: $orange_color;
+          position: relative;
+          align-items: flex-start;
+          padding: 40px;
+          z-index: 2;
+          border-radius: 25px;
+    
+        }
+
+        .image{
+          display: none;
+        }
+      }
+    }
+
+      .why_me {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        // width: 100%;
+        padding: 40px;
+        height: 90%;
+        border-radius: 25px;
+
+
+        h2 {
+          font-size: clamp(32px, 3vw, 40px);
+          color: $bc_color;
+          margin-bottom: 20px;
+        }
+
+        .about_us_why_me {
+          list-style: none;
+          color: $bc_color;
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          padding: 0;
+
+
+          .about_us_why_me_item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+          }
+        }
+
+        h2{
+          // margin: 0;
+          margin-left:88px ;
+        }
+        p{
+          margin: 20px 0 0 88px;
+          // margin-left: 88px;
+        }
+
+        .about_us_why_me_item h1 {
+          font-size: 32px;
+        }
+
+        .about_us_why_me_item .icon {
+          width: 55px;
+          background-color: $orange_color;
+          padding: 7.5px;
+          border-radius: 5px;
+        }
+      }
+
+    
+  }
+
+
+  .brands {
+    .brands_list {
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+      margin: 0 160px;
+      padding: 0;
+
+      :nth-child(2) {
+        margin: 0 40px;
+      }
+
+      .brands_list_item {
+        display: flex;
+        flex-direction: column;
+        width: 510px;
+
+        h1 {
+          font-size: 48px;
+          text-align: center;
+        }
+
+        hr {
+          margin: 0;
+          border-bottom: rgba($color: #E66E3A, $alpha: 0.5) solid 7px;
+          width: 100%;
+
+        }
+
+        p {
+          font-size: 24px;
+          margin: 50px 10px;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .background {
+    position: relative;
+    background-color: $blue_color; // Основной синий цвет фона
+    height: 90px; // Высота блока (измените на нужное значение)
+    clip-path: polygon(0% 0%, 100% 60%, 100% 100%, 0 100%);
+    padding-top: 140px;
+    padding: 140px 160px 20px;
+
+
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+      color: $bc_color;
+    }
+  }
+
+  .promo-media {
+    position: relative;
+  }
+
+  .background-triangle {
+    position: absolute;
+    left:
+      10px;
+    width: 540px;
+    height: 540px;
+    z-index: -2;
+  }
+
+  .container-video {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    clip-path: polygon(50% 15%, 0% 100%, 100% 100%);
+    z-index: -1;
+  }
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    transform: translate(-50%, -35%);
+  }
+
+  #playPauseButton {
+    all: unset;
+    background-color: #454c73;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: -25px;
+    left: 25px;
+    cursor: pointer;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #playPauseButton svg {
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+
+  }
+
+  .digital {
+    background-color: $blue_color;
+    display: flex;
+    flex-direction: row;
+    padding: 120px 160px;
+
+    margin: 0;
+    /* Убедитесь, что отступы равны 0 */
+    border: none;
+    /* Убедитесь, что границы отсутствуют */
+
+
+    div {
+      object-fit: cover;
+
+      img {
+        width: 100%;
+        padding: 5px;
+
+      }
+    }
+
+    p {
+      font-size: 24px;
+      margin: 0;
+      width: 50%;
+      margin-right: 160px;
+      color: $bc_color;
+    }
+  }
+
+  footer {
+    background-color: $blue_color;
+    margin: 0;
+    border: none;
+    flex-direction: row;
+
+    .icon {
+      filter: invert(100%);
+    }
+  }
+
+}
